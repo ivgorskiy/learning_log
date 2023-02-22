@@ -1,0 +1,24 @@
+{% extends "learning_logs/base.html" %}
+{% load bootstrap4 %}
+
+{% block page_header %}
+  <h2>User: {{ user.username }}</h2>
+{% endblock page_header %}
+
+
+{% block content %}
+
+<form action="{% url 'users:profile' user.id %}" method="post">
+  {% csrf_token %}
+  {% bootstrap_form form %}
+  <button type="submit" class="btn btn-primary mb-3">save changes</button>
+  <a class="btn btn-primary mb-3"
+  href="{% url 'users:confirm_user_delete' user.id %}"
+  role="button">delete account</a>
+  <a class="btn btn-primary mb-3"
+  href="{% url 'learning_logs:index' %}"
+  role="button">back</a>
+</form>
+
+{% endblock content %}
+
