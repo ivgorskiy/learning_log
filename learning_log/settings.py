@@ -27,15 +27,9 @@ IS_HEROKU = "DYNO" in os.environ
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-eeh!&hkfg#pndt4-b^ny#f5*bg8%jzs2_nob%+!)2)%1n7(upu')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if not IS_HEROKU:
-    DEBUG = True
-else:
-    DEBUS = False
+DEBUG = True
 
-if IS_HEROKU:
-    ALLOWED_HOSTS = ["learning-logs.herokuapp.com", "127.0.0.1"]
-else:
-    ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []
 
 
 # Application definition
