@@ -17,19 +17,16 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-IS_HEROKU = "DYNO" in os.environ
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-eeh!&hkfg#pndt4-b^ny#f5*bg8%jzs2_nob%+!)2)%1n7(upu'
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-eeh!&hkfg#pndt4-b^ny#f5*bg8%jzs2_nob%+!)2)%1n7(upu')
+SECRET_KEY = 'django-insecure-eeh!&hkfg#pndt4-b^ny#f5*bg8%jzs2_nob%+!)2)%1n7(upu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['learning-logs.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -66,7 +63,7 @@ ROOT_URLCONF = 'learning_log.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # путь к страницам ошибок
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
