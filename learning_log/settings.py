@@ -33,7 +33,7 @@ else:
     DEBUS = False
 
 if IS_HEROKU:
-    ALLOWED_HOSTS = ["learning-logs.herokuapp.com"]
+    ALLOWED_HOSTS = ["learning-logs.herokuapp.com", "127.0.0.1"]
 else:
     ALLOWED_HOSTS = []
 
