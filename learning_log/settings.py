@@ -30,7 +30,10 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-eeh!&hkfg#pndt
 if not IS_HEROKU:
     DEBUG = True
 
-ALLOWED_HOSTS = []
+if IS_HEROKU:
+    ALLOWED_HOSTS = ["*"]
+else:
+    ALLOWED_HOSTS = []
 
 
 # Application definition
