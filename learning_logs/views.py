@@ -60,7 +60,7 @@ def new_topic(request):
 @login_required
 def edit_topic(request, topic_id):
     """Редактирование темы."""
-    topic = Topic.objects.get(id=topic_id)
+    topic = get_object_or_404(Topic, id=topic_id)
 
     if request.method != 'POST':
         # Исходный запрос, форма заполняется данными текущей записи
