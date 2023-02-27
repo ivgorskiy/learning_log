@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-eeh!&hkfg#pndt4-b^ny#f5*bg8%jzs2_nob%+!)2)%1n7(upu
 if not IS_HEROKU:
     DEBUG = True
 
-ALLOWED_HOSTS = ['cryptic-bayou-80985.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['learning-logs.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
