@@ -143,7 +143,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Мои настройки
 LOGIN_URL = '/users/login/'
 AUTH_USER_MODEL = 'users.CustomUser'
-
-# Настройки Heroku
-import django_heroku
-django_heroku.settings(locals())
