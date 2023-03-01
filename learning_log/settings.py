@@ -33,8 +33,10 @@ if 'SECRET_KEY' in os.environ:
 if not IS_HEROKU:
     DEBUG = True
 
-ALLOWED_HOSTS = ['learning-logs.herokuapp.com', '127.0.0.1']
-
+if IS_HEROKU:
+    ALLOWED_HOSTS = ["*"]
+else:
+    ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -139,7 +141,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATIC_URL = 'static/'
 
 # Enable WhiteNoise's GZIP compression of static assets.
