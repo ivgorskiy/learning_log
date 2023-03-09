@@ -1,5 +1,5 @@
 {% extends "learning_logs/base.html" %}
-{% load bootstrap4 %}
+{% load django_bootstrap5 %}
 
 {% block page_header %}
   <h3>Add a new entry. Topic: 
@@ -12,7 +12,9 @@
 <form action="{% url 'learning_logs:new_entry' topic.id %}" method="post" class="form">
     {% csrf_token %}
     {% bootstrap_form form %}
+    
     <button type="submit" class="btn btn-primary mb-3">add entry</button>
+    
     <a class="btn btn-primary mb-3"
     href="{% url 'learning_logs:topic' topic.id %}"
     role="button">back</a>

@@ -1,5 +1,5 @@
 {% extends "learning_logs/base.html" %}
-{% load bootstrap4 %}
+{% load django_bootstrap5 %}
 
 {% block page_header %}
   <h2>User: {{ user.username }}</h2>
@@ -14,6 +14,7 @@
 <a class="btn btn-primary mb-3"
 href="{% url 'users:user_delete' user.id %}"
 role="button">delete account</a>
+
 <a class="btn btn-primary mb-3"
 href="{% url 'users:profile' user.id %}"
 role="button">back</a>

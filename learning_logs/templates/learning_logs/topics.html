@@ -13,7 +13,7 @@
     {% for topic in topics %}
       <li class="list-group-item d-flex justify-content-between align-items-center">
         <a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a>
-        <div class="float-right">
+        <div class="float-end">
           <a href="{% url 'learning_logs:edit_topic' topic.id %}">edit</a>
           <a href="{% url 'learning_logs:delete_topic' topic.id %}">delete</a>
         </div>
