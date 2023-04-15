@@ -14,5 +14,3 @@ The application has the following features:
 
 The project uses a custom user model.
 Web design is made using bootstrap v5.
-
-The project is deployed at https://learning-logs.herokuapp.com/.
