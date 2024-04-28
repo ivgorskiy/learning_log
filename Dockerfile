@@ -16,8 +16,6 @@ FROM $BASE_IMAGE
 RUN apt-get -y update && \
     # Установка загруженных пакетов
     apt-get install -y --no-install-recommends \
-    build-essential \
-    openssl libssl-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
