@@ -35,7 +35,7 @@ DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 if IS_HEROKU:
     ALLOWED_HOSTS = ["*"]
 else:
-    ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = ['127.0.0.1', '127.0.0.1:8000', '0.0.0.0']
 
 # Application definition
 
