@@ -31,4 +31,4 @@ RUN python3 -m pip install --user --upgrade pip && \
     python3 -m pip install -r requirements.txt
 
 # Команда, выполняемая при запуске созданного контейнера
-CMD ["python", "manage.py"]
+CMD ["python", "manage.py", "runserver"]
